@@ -36,3 +36,28 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.display-4 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #ffffff;
+    color: #777;
+}
+
+.footer ul {
+    float: right;
+    list-style: none;
+}
+
+.footer ul li {
+    float: left;
+    margin-left: 15px;
+}
