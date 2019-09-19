@@ -5,6 +5,15 @@
 		<%= @article.title %>
 	</div>
 	<div class="card-body">
+		<div class="row justify-content-center">
+			<div>
+				Created by :
+				<%= link_to gravatar_for(@article.user), user_path(@article.user) %><br>
+				<%= link_to @article.user.username, user_path(@article.user) %> <br>
+				<small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small>
+			</div>
+    	</div>
+    	<br>
 		<%= simple_format(@article.description) %>
 	</div>
 	<div class="card-footer">
