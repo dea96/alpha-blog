@@ -12,8 +12,11 @@
                 <div class="card-header">
                     <%= link_to user.username, user_path(user) %>
                 </div>
-                <div class="card-body">
-                    <small><%= pluralize(user.articles.count, "article") if user.articles %></small>
+                <div class="card-body text-center">
+                    <small><%= pluralize(user.articles.count, "article") if user.articles %></small><br>
+                    <% if logged_in? and current_user.admin? %>
+                        <%= link_to "Delete this user", user_path(user), method: :delete, class: "btn btn-sm btn-danger", data: { confirm: "Are you sure you want to delete the user and all their articles?" } %>
+                    <% end %>
                 </div>  
             </div>
         </div>
