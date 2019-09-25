@@ -14,8 +14,9 @@ class UsersController < ApplicationController
         #debugger
         @user = User.new(user_params)
         if @user.save
+            session[:user_id] = @user.id
             flash[:success] = "Welcome to the alpha blog #{@user.username}"
-            redirect_to articles_path
+            redirect_to user_path(@user)
         else
             render 'new'
         end
@@ -26,7 +27,6 @@ class UsersController < ApplicationController
     end
 
     def update
-        
         if @user.update(user_params)
             flash[:success] = "Your account updated successfully"
             redirect_to articles_path
