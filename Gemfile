@@ -24,6 +24,8 @@ gem 'bcrypt', '~> 3.1.7'
 #will paginate
 gem 'will_paginate', '~> 3.1.1'
 gem 'will_paginate-bootstrap4'
+#automated test
+gem 'rails-controller-testing'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
